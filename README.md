@@ -4,7 +4,9 @@ Browserexperiment für Truth Machines mit MediaPipe und Three.js. Eine gemeinsam
 
 ## Online
 
-Die Veröffentlichung ist für GitHub Pages vorbereitet. Für die Nutzung dort genügen Browser und optional eine Webcam. Es sind keine Installation, kein Python und kein API-Schlüssel erforderlich.
+[Anwendung öffnen](https://maicoding.github.io/truth-motion/) · [Zum Versuch](https://maicoding.github.io/truth-motion/anleitung.html)
+
+Für die Nutzung genügen Browser und optional eine Webcam. Keine Installation und kein API-Schlüssel erforderlich.
 
 ## Bedienung
 
