@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eine Bewegung, zwei Urteile · Truth Machines</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<header><span>Truth Machines / Versuch 01</span><a href="anleitung.html">Zum Versuch ↗</a></header>
+<main>
+<h1>Eine Bewegung.<br>Zwei Urteile.</h1>
+<p class="intro">Dieselbe Handbewegung heißt hier „entschlossen“ und „unsicher“. Ändere die Regeln und beobachte, wann das Urteil kippt. Alle Zuschreibungen sind erfunden.</p>
+<section class="controls" aria-label="Versuch steuern">
+<label>Eingabe<select id="source"><option value="demo">Simulation ohne Kamera</option><option value="camera">Webcam / eine Hand</option></select></label>
+<button id="start">Versuch starten</button><button id="stop" disabled>Stoppen</button>
+<button id="record" disabled>6 Sekunden aufnehmen</button><button id="replay" disabled>Aufnahme wiederholen</button><button id="export" disabled>Messdaten speichern</button>
+</section>
+<p id="status" role="status" aria-live="polite">Bereit. Die Simulation verwendet berechnete Handpunkte.</p>
+<section class="experiment" aria-label="Ergebnisvergleich">
+<div class="input"><h2>01 / Eingabe</h2><div class="camera"><video id="video" playsinline muted></video><canvas id="overlay" width="640" height="480" aria-label="Kamerabild oder simulierte Handpunkte"></canvas></div><p id="origin">Quelle: noch keine</p><p id="measurement">Geschwindigkeit: — Handbreiten/s</p><p id="phase">Zustand: keine Daten</p><canvas id="history" width="640" height="150" aria-label="Geschwindigkeitsverlauf der letzten sechs Sekunden"></canvas><small>Verlauf: 0 bis 8 Handbreiten/s. Die Linie markiert die Schwelle. Höhere Werte werden am oberen Rand abgeschnitten.</small></div>
+<div class="judgment a"><h2>02 / System A</h2><div class="scene" id="sceneA" role="img" aria-label="Abstrakte Form für System A"></div><p class="verdict" id="verdictA">—</p><p class="reason" id="reasonA">Wartet auf Eingabe.</p><p>Erfundene Deutung für diesen Versuch</p></div>
+<div class="judgment b"><h2>03 / System B</h2><div class="scene" id="sceneB" role="img" aria-label="Abstrakte Form für System B"></div><p class="verdict" id="verdictB">—</p><p class="reason" id="reasonB">Wartet auf Eingabe.</p><p>Erfundene Deutung für diesen Versuch</p></div>
+</section>
+<section class="rules"><h2>Die Regeln liegen offen.</h2><div class="rule-controls"><label>Schwelle: <output id="thresholdValue">2,5</output> Handbreiten/s<input id="threshold" type="range" min="0.5" max="6" step="0.1" value="2.5"></label><label>Glättung τ: <output id="smoothingValue">0,18</output> s<input id="smoothing" type="range" min="0" max="0.6" step="0.02" value="0.18"></label><button id="reset">Regeln zurücksetzen</button></div>
+<div class="label-controls"><label>A bei schneller Bewegung<input id="labelAfast" maxlength="32" value="entschlossen"></label><label>A bei langsamer Bewegung<input id="labelAslow" maxlength="32" value="zögerlich"></label><label>B bei schneller Bewegung<input id="labelBfast" maxlength="32" value="unsicher"></label><label>B bei langsamer Bewegung<input id="labelBslow" maxlength="32" value="besonnen"></label></div>
+<table><thead><tr><th>Bedingung</th><th>System A behauptet</th><th>System B behauptet</th></tr></thead><tbody><tr><td>v ≥ Schwelle</td><td id="ruleAfast">„entschlossen“</td><td id="ruleBfast">„unsicher“</td></tr><tr><td>v &lt; Schwelle</td><td id="ruleAslow">„zögerlich“</td><td id="ruleBslow">„besonnen“</td></tr><tr><td>Kein gültiger Wert</td><td>Keine Deutung</td><td>Keine Deutung</td></tr></tbody></table>
+<p id="evaluation">Aktuelle Auswertung: —</p><p>v = Weg ÷ Zeit ÷ Handbreite. MediaPipe schätzt die Handpunkte. Daraus berechnen wir die Bewegung des Handzentrums. Die Begriffe werden durch die hier sichtbaren Regeln zugeordnet.</p><p>Beide Formen erhalten denselben Wert. Die Schwelle bestimmt das Urteil. Glättung dämpft kurze Ausschläge. Gemessen wird Bewegung im Bild; Gefühle oder Persönlichkeit lassen sich daraus nicht ablesen.</p>
+</section>
+<details><summary>Grenzen, Datenschutz und Fehlersuche</summary><p>Die Kamera wird erst nach „Versuch starten“ im Webcam-Modus aktiviert. Kamerabilder werden in dieser Anwendung lokal verarbeitet. „Stoppen“, ein Quellenwechsel und das Verlassen der Seite beenden den Kamerastream. Es werden keine Videos oder Bilder gespeichert. Die Aufnahme hält höchstens sechs Sekunden Zahlenwerte im Arbeitsspeicher. Erst „Messdaten speichern“ lädt eine JSON-Datei herunter.</p><p>Bibliotheken und Handmodell liegen im Ordner vendor. Die mitgelieferte Anwendung benötigt nach dem Download keine externen Dienste. Bei fehlender Hand, sehr kleiner Handbreite, Sprüngen oder längeren Zeitlücken wird die Deutung unterbrochen. Perspektive, Licht, Verdeckung und Bewegung zur Kamera verändern die Messung. Eine Person mit einer sichtbaren Hand verwenden.</p><p>Ein lokaler Server oder HTTPS ist erforderlich. Bei verweigerter Freigabe die Kameraberechtigung im Browser prüfen. Bei WebGL-Problemen bleibt die textliche Auswertung nutzbar. Der Simulator und die Wiedergabe ersetzen keinen Test mit einer echten Hand.</p></details>
+<footer>Truth Machines / 16.10.2026 · <a href="anleitung.html">Anleitung</a> · <a href="QUELLEN.md">Quellen und Versionen</a></footer>
+</main><script type="module" src="app.js"></script>
+</html>

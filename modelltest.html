@@ -1,0 +1,11 @@
+<!doctype html><html lang="de"><meta charset="utf-8"><title>MediaPipe Modellprüfung</title><p id="result">Lädt lokale WASM-Dateien und das Handmodell …</p><script type="module">
+import { FilesetResolver, HandLandmarker } from './vendor/vision_bundle.mjs';
+try {
+const vision = await FilesetResolver.forVisionTasks('./vendor/wasm');
+const tracker = await HandLandmarker.createFromOptions(vision, {baseOptions:{modelAssetPath:'./vendor/hand_landmarker.task',delegate:'CPU'},runningMode:'IMAGE',numHands:1});
+const canvas=document.createElement('canvas'); canvas.width=640;canvas.height=480;
+const context=canvas.getContext('2d');context.fillStyle='white';context.fillRect(0,0,640,480);
+const result=tracker.detect(canvas);tracker.close();
+document.getElementById('result').textContent='BESTANDEN: lokale WASM-Dateien und Modell geladen, Inferenz auf leerem Testbild ausgeführt. Erkannte Hände: '+result.landmarks.length+'. Kein Webcamtest.';
+} catch(e) { document.getElementById('result').textContent='FEHLER: '+e.message; }
+</script></html>
