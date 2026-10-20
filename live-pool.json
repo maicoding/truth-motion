@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-20T20:34:03+00:00",
+  "checkedAt": "2026-10-20T23:51:13+00:00",
   "driveFolder": "https://drive.google.com/drive/folders/141UI3Jy4s4ppzFwWdIO00CdjRM9p6iXi",
   "refreshCadence": "hourly",
   "promptVersion": "truth-aphorisms-2026-10-20-v1",
@@ -73,6 +73,6 @@
       "origin": "Google Drive / Midjourney - Train - d9c8b398-3eb2-49a3-b688-e0088116c14a - 2.png"
     }
   ],
-  "imagesUpdatedAt": "2026-10-20T20:34:03+00:00",
+  "imagesUpdatedAt": "2026-10-20T23:51:13+00:00",
   "truisms": []
 }
