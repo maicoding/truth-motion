@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-20T12:13:23+00:00",
+  "checkedAt": "2026-10-20T12:23:19+00:00",
   "driveFolder": "https://drive.google.com/drive/folders/141UI3Jy4s4ppzFwWdIO00CdjRM9p6iXi",
   "refreshCadence": "hourly",
   "promptVersion": "truth-aphorisms-2026-10-20-v1",
@@ -15,8 +15,64 @@
       "url": "drive-images/1wIarNDuLIRZS-J5qWD7mHc5jy0Ok_mD_.png",
       "source": "https://drive.google.com/file/d/1wIarNDuLIRZS-J5qWD7mHc5jy0Ok_mD_/view",
       "origin": "Google Drive / Foil study (AI-generated).png"
+    },
+    {
+      "id": "1FmpENecweXFD1gFXc7qbCpJKXEhH_TS5",
+      "title": "Midjourney - Cactus - 7389a8a7-d883-4da7-a794-2c2ff314ef5a - 2.png",
+      "url": "drive-images/1FmpENecweXFD1gFXc7qbCpJKXEhH_TS5.png",
+      "source": "https://drive.google.com/file/d/1FmpENecweXFD1gFXc7qbCpJKXEhH_TS5/view",
+      "origin": "Google Drive / Midjourney - Cactus - 7389a8a7-d883-4da7-a794-2c2ff314ef5a - 2.png"
+    },
+    {
+      "id": "1D7Cojt-zKui9PJbAc-D5UDBRMY_uqisM",
+      "title": "Midjourney - Gate - aa10ed91-2c89-4197-be20-95b6d84772e5 - 0.png",
+      "url": "drive-images/1D7Cojt-zKui9PJbAc-D5UDBRMY_uqisM.png",
+      "source": "https://drive.google.com/file/d/1D7Cojt-zKui9PJbAc-D5UDBRMY_uqisM/view",
+      "origin": "Google Drive / Midjourney - Gate - aa10ed91-2c89-4197-be20-95b6d84772e5 - 0.png"
+    },
+    {
+      "id": "1LnF9N_7vrjgsTJp3SrU4dNqxxWHKpIAV",
+      "title": "Midjourney - Pool passage - 30308057-78c5-4e8f-a5b3-451b9dc28499 - 0.png",
+      "url": "drive-images/1LnF9N_7vrjgsTJp3SrU4dNqxxWHKpIAV.png",
+      "source": "https://drive.google.com/file/d/1LnF9N_7vrjgsTJp3SrU4dNqxxWHKpIAV/view",
+      "origin": "Google Drive / Midjourney - Pool passage - 30308057-78c5-4e8f-a5b3-451b9dc28499 - 0.png"
+    },
+    {
+      "id": "1Cd2u1R7bf9BQDAfm2uNIMmRpKdxUxKvz",
+      "title": "Midjourney - Reader - 4c8be2af-6e5d-4925-bdde-b983effd7712 - 0.png",
+      "url": "drive-images/1Cd2u1R7bf9BQDAfm2uNIMmRpKdxUxKvz.png",
+      "source": "https://drive.google.com/file/d/1Cd2u1R7bf9BQDAfm2uNIMmRpKdxUxKvz/view",
+      "origin": "Google Drive / Midjourney - Reader - 4c8be2af-6e5d-4925-bdde-b983effd7712 - 0.png"
+    },
+    {
+      "id": "1jIdMqKsv_rNTjQuO4Chf1zlpyPrFQXJr",
+      "title": "Midjourney - Sandcastle - 7389a8a7-d883-4da7-a794-2c2ff314ef5a - 0.png",
+      "url": "drive-images/1jIdMqKsv_rNTjQuO4Chf1zlpyPrFQXJr.png",
+      "source": "https://drive.google.com/file/d/1jIdMqKsv_rNTjQuO4Chf1zlpyPrFQXJr/view",
+      "origin": "Google Drive / Midjourney - Sandcastle - 7389a8a7-d883-4da7-a794-2c2ff314ef5a - 0.png"
+    },
+    {
+      "id": "1xpyxqITJ32DDF-R66dQLPSRlZiTHig6V",
+      "title": "Midjourney - Shelter book - 56f07558-f342-4e23-9738-f473507000b9 - 1.png",
+      "url": "drive-images/1xpyxqITJ32DDF-R66dQLPSRlZiTHig6V.png",
+      "source": "https://drive.google.com/file/d/1xpyxqITJ32DDF-R66dQLPSRlZiTHig6V/view",
+      "origin": "Google Drive / Midjourney - Shelter book - 56f07558-f342-4e23-9738-f473507000b9 - 1.png"
+    },
+    {
+      "id": "1esynS20BalEvKOUZrFCfbeQzepCpkdZz",
+      "title": "Midjourney - Traces - d0b59a81-935b-4158-b66e-0289056438d8 - 3.png",
+      "url": "drive-images/1esynS20BalEvKOUZrFCfbeQzepCpkdZz.png",
+      "source": "https://drive.google.com/file/d/1esynS20BalEvKOUZrFCfbeQzepCpkdZz/view",
+      "origin": "Google Drive / Midjourney - Traces - d0b59a81-935b-4158-b66e-0289056438d8 - 3.png"
+    },
+    {
+      "id": "1QBYll4iTw0kwzo-YLkC2UmEymjuZ0huW",
+      "title": "Midjourney - Train - d9c8b398-3eb2-49a3-b688-e0088116c14a - 2.png",
+      "url": "drive-images/1QBYll4iTw0kwzo-YLkC2UmEymjuZ0huW.png",
+      "source": "https://drive.google.com/file/d/1QBYll4iTw0kwzo-YLkC2UmEymjuZ0huW/view",
+      "origin": "Google Drive / Midjourney - Train - d9c8b398-3eb2-49a3-b688-e0088116c14a - 2.png"
     }
   ],
-  "imagesUpdatedAt": "2026-10-20T12:13:23+00:00",
+  "imagesUpdatedAt": "2026-10-20T12:23:19+00:00",
   "truisms": []
 }
