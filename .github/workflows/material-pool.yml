@@ -1,0 +1,55 @@
+name: Refresh Truth Machine
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: truth-machine-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh public material
+        if: github.event_name != 'push'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python backend/refresh_pool.py
+      - name: Keep material history
+        if: github.event_name != 'push'
+        run: |
+          git config user.name 'Truth Machine'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add live-pool.json drive-images/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public truisms and image pool'
+            git push
+          fi
+      - name: Prepare website only
+        run: |
+          mkdir public
+          cp *.html *.js *.css *.jpg *.png .nojekyll live-pool.json public/
+          cp -r vendor drive-images public/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4

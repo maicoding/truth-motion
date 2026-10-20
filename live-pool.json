@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-20T12:08:52+00:00",
+  "driveFolder": "https://drive.google.com/drive/folders/141UI3Jy4s4ppzFwWdIO00CdjRM9p6iXi",
+  "refreshCadence": "hourly",
+  "promptVersion": "truth-aphorisms-2026-10-20-v1",
+  "prompt": "Write original English aphoristic statements for an experimental art publication called Something Must Be True. The subject is how authority, belief, memory, interfaces, institutions and images manufacture credibility. Write 24 distinct, sharp, strange sentences. Each should fit on a poster: usually 5 to 14 words, at most 150 characters. Use concrete objects, uncomfortable observations, ambiguity and occasional dry humour. Vary syntax and attitude. Avoid marketing, motivational advice, generic technology commentary, em dashes, antithesis, \"not X but Y\", endless \"X is Y\" definitions, and repeated sentence openings. Do not quote or imitate specific living artists, including Jenny Holzer. Do not copy familiar slogans. Do not claim verified research, invent citations, accuse real people, or offer medical/legal/financial advice. These are speculative authored utterances, not factual findings. Return uppercase sentences, with punctuation, in the requested JSON object.",
+  "errors": {
+    "ai": "http_429_credit_balance_exhausted"
+  },
+  "images": [
+    {
+      "id": "1wIarNDuLIRZS-J5qWD7mHc5jy0Ok_mD_",
+      "title": "Foil study (AI-generated).png",
+      "url": "drive-images/1wIarNDuLIRZS-J5qWD7mHc5jy0Ok_mD_.png",
+      "source": "https://drive.google.com/file/d/1wIarNDuLIRZS-J5qWD7mHc5jy0Ok_mD_/view",
+      "origin": "Google Drive / Foil study (AI-generated).png"
+    }
+  ],
+  "imagesUpdatedAt": "2026-10-20T12:08:52+00:00",
+  "truisms": []
+}
